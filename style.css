@@ -1,0 +1,92 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}
+
+.wrapper .read-only-button, .wrapper .cancel-read-only-button {
+	position: absolute;
+	top: 10%;
+	padding: 1.5rem;
+	background: red;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+}
+
+.wrapper .tag-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	border: .1rem solid black;
+	padding: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+.wrapper .tag-container .tag {
+	padding: .5rem 1.5rem;
+	margin: .5rem;
+	border: .1rem solid pink;
+	display: flex;
+	background: moccasin;
+	border-radius: .5rem;
+	cursor: default;
+}
+.wrapper .tag-container .tag .tag-name {
+	position: relative;
+	font-size: 1.2rem;
+}
+
+.wrapper .tag-container .tag .tag-name .tag-close {
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+}
+
+.wrapper .tag-container .tag .tag-name .tag-close:before, .wrapper .tag-container .tag .tag-name .tag-close:after {
+	position: absolute;
+	left: .7rem;
+	content: ' ';
+	height: 1.4rem;
+	width: .1rem;
+	background-color: #333;
+}
+
+.wrapper .tag-container .tag .tag-name .tag-close:before {
+	transform: rotate(45deg);
+}
+
+.wrapper .tag-container .tag .tag-name .tag-close:after {
+	transform: rotate(-45deg);
+}
+
+.wrapper .tag-container .tag-input {
+	font-size: 1.5rem;
+	padding: .5rem;
+	outline: none;
+}
+
+.wrapper .button {
+	align-self: center;
+	width: 10rem;
+	padding: 2.5rem;
+	cursor: pointer;
+}
